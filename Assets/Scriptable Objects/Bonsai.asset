@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df24aeea8f943194abcbeaf6af8ff662, type: 3}
+  m_Name: Bonsai
+  m_EditorClassIdentifier: 
+  ItemName: Bonsai
+  ItemImage: {fileID: 21300000, guid: a223de2f9461f8f4b8450fed9a0454f8, type: 3}
+  price: 200
+  ItemDescription: DoricColumn
+  Item3DModel: {fileID: 2776323889839160740, guid: b19089bc4c30516448b14dcb306fa829,
+    type: 3}

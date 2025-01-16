@@ -23,16 +23,9 @@ public class UIManager : MonoBehaviour
 
     private void ActivateMenu()
     {
-        // Animaciones para que aparezca los menus
-        //mainMenu.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.3f);
-
-        // Mover el scroll de abajo hacia arriba
-        //mainMenu.transform.GetChild(0).transform.DOMoveY(180, 0.3f);
-
         mainMenu.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.3f);
 
         library.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
-        //library.transform.GetChild(0).transform.DOMoveY(180, 0.3f);
         library.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
 
         arPosition.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
@@ -44,7 +37,8 @@ public class UIManager : MonoBehaviour
         mainMenu.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
 
         library.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.3f);
-        //library.transform.GetChild(0).transform.DOMoveY(300, 0.3f);
+        library.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.3f);
+
         library.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.3f);
     }
 
@@ -53,11 +47,9 @@ public class UIManager : MonoBehaviour
         mainMenu.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
 
         library.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
-        //library.transform.GetChild(0).transform.DOMoveY(180, 0.3f);
         library.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
 
         arPosition.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.3f);
-
     }
 
 
