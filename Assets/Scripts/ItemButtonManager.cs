@@ -23,7 +23,7 @@ public class ItemButtonManager : MonoBehaviour
     [SerializeField] private GameObject floorShadow;
     private GameObject floorShadorScene;
 
-    private ARInteractionManager interactionManager;
+    private ARInteractionManager arInteractionManager;
 
     private void Start()
     {
@@ -35,12 +35,20 @@ public class ItemButtonManager : MonoBehaviour
         button.onClick.AddListener(GameManager.instance.ARPosition);
         button.onClick.AddListener(Create3DModel);
 
-        interactionManager = FindObjectOfType<ARInteractionManager>();
+        arInteractionManager = FindObjectOfType<ARInteractionManager>();
     }
 
     private void Create3DModel()
     {
-        interactionManager.Item3DModel = Instantiate(item3DModel);
+
+        floorShadorScene = GameObject.FindGameObjectWithTag("Floor");
+        if (floorShadorScene != null)
+        {
+            arInteractionManager.Item3DModel = Instantiate(floorShadow);
+            floorShadow.SetActive(true);
+        }
+        arInteractionManager.Item3DModel = Instantiate(item3DModel);
+
 
     }
 }

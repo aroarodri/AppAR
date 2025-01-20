@@ -16,5 +16,5 @@ MonoBehaviour:
   ItemImage: {fileID: 21300000, guid: a223de2f9461f8f4b8450fed9a0454f8, type: 3}
   price: 200
   ItemDescription: DoricColumn
-  Item3DModel: {fileID: 2776323889839160740, guid: b19089bc4c30516448b14dcb306fa829,
+  Item3DModel: {fileID: 4506558511885177778, guid: c8eb11bcf76e62e429d073dbb315ed61,
     type: 3}

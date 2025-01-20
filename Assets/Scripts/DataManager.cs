@@ -10,12 +10,21 @@ public class DataManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameManager.instance.OnLibrary += CreateButtons;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void CreateButtons()
     {
-
+        foreach (var item in items)
+        {
+            ItemButtonManager itemButton;
+            itemButton = Instantiate(itemButtonManager, buttonContainer.transform);
+            itemButton.ItemName = item.ItemName;
+            itemButton.ItemDescription = item.ItemDescription;
+            itemButton.ItemImage = item.ItemImage;
+            itemButton.Item3DModel = item.Item3DModel;
+            itemButton.name = item.name;
+        }
+        GameManager.instance.OnLibrary -= CreateButtons;
     }
+
 }

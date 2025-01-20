@@ -476,3 +476,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc20442fbf123f04984a9335b068783f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorShadow: {fileID: 8261889909929986799, guid: 202fd2759ac66aa468ad379cf2949cc0,
+    type: 3}

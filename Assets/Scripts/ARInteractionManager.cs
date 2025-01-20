@@ -27,6 +27,19 @@ public class ARInteractionManager : MonoBehaviour
             item3DModel.transform.position = arPointer.transform.position;
             item3DModel.transform.parent = arPointer.transform;
             isInitialPosition = true;
+            arPointer.SetActive(true);
+        }
+    }
+
+    private GameObject floorShadow;
+
+    public GameObject FloorShadow
+    {
+        set
+        {
+            floorShadow = value;
+            floorShadow.transform.position = arPointer.transform.position;
+            floorShadow.transform.parent = arPointer.transform;
         }
     }
 
@@ -50,6 +63,7 @@ public class ARInteractionManager : MonoBehaviour
 
                 arPointer.SetActive(true);
                 isInitialPosition = false;
+                SetFloorPosition();
             }
         }
 
@@ -108,6 +122,7 @@ public class ARInteractionManager : MonoBehaviour
         }
     }
 
+
     private bool isTouchOver3DModel(Vector2 touchPosition)
     {
         Ray ray = arCamera.ScreenPointToRay(touchPosition);
@@ -141,6 +156,14 @@ public class ARInteractionManager : MonoBehaviour
             item3DModel.transform.parent = null;
             arPointer.SetActive(false);
             item3DModel = null;
+        }
+    }
+
+    private void SetFloorPosition()
+    {
+        if (floorShadow != null)
+        {
+            floorShadow.transform.parent = null;
         }
     }
 
