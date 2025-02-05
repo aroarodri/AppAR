@@ -55,10 +55,10 @@ public class ShareScreenShot : MonoBehaviour
         // To avoid memory leaks
         Destroy(ss);
 
-        //new NativeShare().AddFile(filePath)
-        //    .SetSubject("Subject goes here").SetText("Hey! Check out this app!!!")
-        //    .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
-        //    .Share();
+        new NativeShare().AddFile(filePath)
+            .SetSubject("Subject goes here").SetText("Hey! Check out this app!!!")
+            .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
+            .Share();
         TurnOnOffARContent();
         // Share on WhatsApp only, if installed (Android only)
         //if( NativeShare.TargetExists( "com.whatsapp" ) )

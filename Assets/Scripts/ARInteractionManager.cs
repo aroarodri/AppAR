@@ -173,10 +173,4 @@ public class ARInteractionManager : MonoBehaviour
         arPointer.SetActive(false);
         GameManager.instance.MainMenu();
     }
-
-    public void ToggleMeasurementTool()
-    {
-        var measurementTool = item3DModel.transform.GetChild(0).gameObject;
-        measurementTool.SetActive(!measurementTool.activeSelf);
-    }
 }
